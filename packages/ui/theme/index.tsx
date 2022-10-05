@@ -13,7 +13,7 @@ export type SetAccentColorFn = (accentColor: string | undefined) => void
 
 export enum Theme {
   Light = 'light',
-  Dark = 'dark',
+  Dark = 'light',
 }
 
 export interface IThemeContext {

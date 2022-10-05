@@ -67,7 +67,7 @@ export const HomepageCards = () => {
         <div className="flex gap-1 items-center">
           <a
             className="z-10 p-1 hover:text-primary bg-primary rounded transition"
-            href="https://github.com/DA0-DA0"
+            href="https://github.com/onchainengineer"
             rel="noreferrer"
             target="_blank"
           >
@@ -75,7 +75,7 @@ export const HomepageCards = () => {
           </a>
           <a
             className="z-10 p-1 hover:text-primary bg-primary rounded transition"
-            href="https://twitter.com/da0_da0"
+            href="https://twitter.com/onchainengineer"
             rel="noreferrer"
             target="_blank"
           >
@@ -83,7 +83,7 @@ export const HomepageCards = () => {
           </a>
           <a
             className="z-10 p-1 hover:text-primary bg-primary rounded transition"
-            href="https://discord.gg/sAaGuyW3D2"
+            href="#"
             rel="noreferrer"
             target="_blank"
           >

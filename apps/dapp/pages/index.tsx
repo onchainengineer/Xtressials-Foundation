@@ -25,8 +25,7 @@ import { FEATURED_DAOS_CACHE_SECONDS } from '@dao-dao/utils'
 import {
   AnouncementCard,
   EnterAppButton,
-  HomepageCards,
-  StatsCard,
+  HomepageCards
 } from '@/components'
 import { getFeaturedDaos } from '@/server'
 
@@ -64,19 +63,18 @@ const Home: NextPage<HomePageProps> = ({ featuredDaos }) => {
                 <div className="mr-3">
                   <Logo size={32} />
                 </div>
-                <p className="mr-1 font-medium">DAO</p>
+                <p className="mr-1 font-medium">Xtressials Foundation</p>
                 <p
                   className="font-semibold text-secondary"
-                  style={{ transform: 'scaleY(-1) scaleX(-1)' }}
-                >
-                  DAO
+                  style={{ transform: 'scaleY(1) scaleX(1)' }}
+                >                  
                 </p>
               </a>
             </Link>
             <div className="flex gap-4 items-center">
               <a
                 className="flex gap-2 items-center"
-                href="https://docs.daodao.zone"
+                href="https://docs.onchain.engineer"
               >
                 {t('splash.documentation')}
                 <ArrowUpRight height="10px" width="10px" />
@@ -110,81 +108,10 @@ const Home: NextPage<HomePageProps> = ({ featuredDaos }) => {
           }
         />
 
-        <div className="flex flex-col grid-cols-3 gap-6 justify-around py-6 divide-focus md:grid md:gap-3 md:py-8 md:divide-x">
-          <StatsCard>
-            <h3 className="header-text">
-              {tvl
-                ? '$' +
-                  tvl.toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                  })
-                : t('info.loading')}
-            </h3>
-            <p className="caption-text">{t('splash.usdcTotalValue')}</p>
-          </StatsCard>
-          <StatsCard>
-            <h3 className="header-text">
-              {daos ? daos.toLocaleString() : t('info.loading')}
-            </h3>
-            <p className="caption-text">{t('splash.daosCreated')}</p>
-          </StatsCard>
-          <StatsCard>
-            <h3 className="header-text">
-              {proposals ? proposals.toLocaleString() : t('info.loading')}
-            </h3>
-            <p className="caption-text">{t('splash.proposalsCreated')}</p>
-          </StatsCard>
-        </div>
-
         <div className="px-3 -mt-8">
-          <div className="flex gap-4 justify-center mt-12 w-full md:px-3 md:mt-28">
-            <RotatableLogo initialRotation={135} />
-            <RotatableLogo initialRotation={90} />
-            <RotatableLogo initialRotation={45} />
-          </div>
-          <h2 className="px-4 mt-12 w-full text-center header-text">
-            {t('splash.transparentGovernanceOnChain')}
-          </h2>
-          <p className="px-4 mx-auto mt-4 max-w-xl text-center text-tertiary primary-text">
-            {t('splash.transparencyExplanation')}
-          </p>
-          <div className="mt-12">
-            <HomepageCards />
-          </div>
           <div className="flex flex-col gap-4 items-center my-12">
-            <h2 className="mx-4 max-w-xl text-center header-text">
-              {t('splash.createExploreJoin')}
-            </h2>
-            <Link href="/home">
-              <a>
-                <Button size="lg">
-                  {t('splash.cta')}
-                  <ArrowUpRight height="10px" width="10px" />
-                </Button>
-              </a>
-            </Link>
           </div>
           <div className="grid grid-cols-1 gap-2 my-10 font-mono md:grid-cols-3 caption-text">
-            <div className="flex flex-wrap gap-6 items-center mx-2 text-xs">
-              <p>
-                {t('info.productVersion', {
-                  versionNumber: process.env.NEXT_PUBLIC_DAO_DAO_VERSION,
-                })}
-              </p>
-              <a
-                className="hover:text-primary transition"
-                href="https://www.junonetwork.io/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                {t('splash.poweredByJuno')}
-                <ArrowNarrowRightIcon
-                  className="inline mb-0.5 w-6 h-4 font-light"
-                  style={{ transform: 'rotateY(0deg) rotate(-45deg)' }}
-                />
-              </a>
-            </div>
           </div>
         </div>
       </GradientWrapper>
