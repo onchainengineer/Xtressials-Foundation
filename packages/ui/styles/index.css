@@ -35,7 +35,7 @@ html {
   color-scheme: light;
 }
 
-html[data-theme='light'] {
+html[data-theme='dark'] {
   --logo-fill: #fff;
   color-scheme: light;
 }

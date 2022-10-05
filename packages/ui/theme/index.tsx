@@ -25,7 +25,7 @@ export interface IThemeContext {
   setAccentColor: SetAccentColorFn
 }
 
-export const DEFAULT_THEME_NAME = Theme.Dark
+export const DEFAULT_THEME_NAME = Theme.Light
 
 export const DEFAULT_THEME: IThemeContext = {
   theme: DEFAULT_THEME_NAME,
